@@ -8,6 +8,8 @@
 ## mkdocs new .
 ## mkdocs build
 ## mkdocs gh-deploy
+#### /!\ Pour changer la configuration:
+### https://squidfunk.github.io/mkdocs-material/setup/
 
 site_name: BTP David ETHEVE
 site_description: Cours de génie civil
@@ -20,15 +22,12 @@ nav:
 - "Test" : Test/index_test.md
 
 theme:
-  #favicon: icones/icons8-cours-100.png
-  #favicon: icones/icons8-prof-64.png
+  favicon: icones/helmet-safety-construction.png
   icon:
-    #logo: fontawesome/brands/debian
-    logo: fontawesome/solid/circle-radiation
-    #logo: fontawesome/brands/d-and-d
-    #logo: fontawesome/solid/jedi
-    #logo: fontawesome/brands/mandalorian
-    #logo: fontawesome/solid/dragon
+    logo: fontawesome/solid/helmet-safety
+    #logo: fontawesome/solid/trowel-bricks
+    #logo: fontawesome/solid/trowel
+    #logo: fontawesome/solid/person-digging
   
   name: material
   language: fr
@@ -63,14 +62,14 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Darkmode
-      primary: teal
+      primary: amber
       accent: amber
     - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Lightmode
-      primary: teal
-      accent: lime
+      primary: amber
+      accent: amber
 
 extra:
   # consent:
@@ -85,7 +84,7 @@ extra:
   #     - reject
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/cr0wth/
+      link: https://github.com/detheve10
 
 markdown_extensions:
   - pymdownx.inlinehilite
@@ -139,4 +138,4 @@ extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
 copyright: |
-  &copy; 2023 <a href="" target="_blank" rel="noopener">Christopher CHAMAND</a>
+  &copy; 2024 <a href="" target="_blank" rel="noopener">David ETHEVE</a>
