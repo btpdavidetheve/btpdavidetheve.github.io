@@ -1,0 +1,142 @@
+### IMPORTANT AVANT L'INSTALLATION
+## sudo apt update
+## sudo apt install python3-pip
+## pip install mkdocs
+## pip install mkdocs-material
+## pip install mkdocs-material-extensions
+## pip install pymdown-extensions
+## mkdocs new .
+## mkdocs build
+## mkdocs gh-deploy
+
+site_name: BTP David ETHEVE
+site_description: Cours de génie civil
+site_author: David ETHEVE
+
+docs_dir: docs
+
+nav:
+- "Accueil" : index.md
+- "Test" : Test/index_test.md
+
+theme:
+  #favicon: icones/icons8-cours-100.png
+  #favicon: icones/icons8-prof-64.png
+  icon:
+    #logo: fontawesome/brands/debian
+    logo: fontawesome/solid/circle-radiation
+    #logo: fontawesome/brands/d-and-d
+    #logo: fontawesome/solid/jedi
+    #logo: fontawesome/brands/mandalorian
+    #logo: fontawesome/solid/dragon
+  
+  name: material
+  language: fr
+
+  features:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.sections
+      - navigation.top
+      #- navigation.expand
+      #- navigation.instant
+      #- navigation.instant.prefetch
+      #- navigation.tracking
+      - navigation.path
+      - navigation.indexes
+      #- navigation.footer
+
+      #- toc.follow
+      #- toc.integrate
+
+      - search.suggest
+      - search.highlight
+      - search.share
+      
+      - content.tabs.link
+      - content.code.annotation
+      - content.code.copy
+      - content.code.annotate 
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Darkmode
+      primary: teal
+      accent: amber
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Lightmode
+      primary: teal
+      accent: lime
+
+extra:
+  # consent:
+  #   title: Cookie consent
+  #   description: >- 
+  #     We use cookies to recognize your repeated visits and preferences, as well
+  #     as to measure the effectiveness of our documentation and whether users
+  #     find what they're searching for. With your consent, you're helping us to
+  #     make our documentation better.
+  #   actions:
+  #     - accept
+  #     - reject
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/cr0wth/
+
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+    # Exception pour code highlight (de façon à faire fonctionner mermaid)
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true          # Volets glissants.  === "Mon volet"
+  - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox: true   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+  - pymdownx.keys:
+      strict: false
+  - footnotes
+  - attr_list
+  # Permet l'utilisation d'abbréviation dans le fichier syntaxe *[abbr]: description (voir glossaire.md)
+  - abbr
+  # Permet l'insertion de fichiers dans le document à l'aide de la syntaxe --8<-- "includes/glossaire.md"
+  - pymdownx.snippets
+  # Admonitions et variantes (details : repliable, superfences : avec onglet)
+  - admonition
+
+plugins:
+  - search
+#  - macros
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/katex.js 
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+copyright: |
+  &copy; 2023 <a href="" target="_blank" rel="noopener">Christopher CHAMAND</a>
